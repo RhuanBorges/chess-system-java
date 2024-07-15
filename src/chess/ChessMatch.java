@@ -25,8 +25,18 @@ public class ChessMatch {
 	}
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
+<<<<<<< HEAD
 		int col = column - 'a';
 		board.placePiece(piece, new Position(row -1, col));
+=======
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+	
+	private void initialSetup() {
+		placeNewPiece('b', 6, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 8, new King(board, Color.BLACK));
+		placeNewPiece('e', 1,new King(board, Color.WHITE));
+>>>>>>> 42dd836c301025920661d61f14bbcd67e6f5aad8
 	}
 	
 	private void initialSetup() {
